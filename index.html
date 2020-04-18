@@ -4,15 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Love Calculator</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <script type="text/javascript" src="main.js"></script>
   </head>
   <body>
-    <center>
-      <input type="text" id="yourName" placeholder="Your Name" />
+    <form id="center">
+      <input type="text" id="yourName" placeholder="Your Name" required />
       <span class="heart_icon">&#128149;</span>
-      <input type="text" id="otherName" placeholder="Your Crush's Name" />
+      <input
+        type="text"
+        id="otherName"
+        placeholder="Your Crush's Name"
+        required
+      />
       <br />
-      <input type="button" id="count" value="Calculate Love %" <a href="" />
-    </center>
+      <div id="disappear">
+        <button type="submit" onclick="btn()" id="count">
+          Calculate Love %
+        </button>
+      </div>
+      <p id="number"></p>
+    </form>
   </body>
 </html>
