@@ -1,7 +1,7 @@
 Simple Love Calculator
 
-To Do:
--Review Code
--Allow only letters in input
--Animation for Random Number Generator
--Improve design
+To Do:<br>
+-Review Code <br>
+-Allow only letters in input <br>
+-Animation for Random Number Generator <br>
+-Improve design 
