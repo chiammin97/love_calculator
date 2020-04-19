@@ -6,25 +6,19 @@
     <title>Love Calculator</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/reset.css" />
-    <script type="text/javascript" src="main.js"></script>
   </head>
   <body>
-    <form id="center">
-      <input type="text" id="yourName" placeholder="Your Name" required />
+    <div id="error"></div>
+    <form id="myForm">
+      <input type="text" id="yourName" placeholder="Your Name" />
       <span class="heart_icon">&#128149;</span>
-      <input
-        type="text"
-        id="otherName"
-        placeholder="Your Crush's Name"
-        required
-      />
+      <input type="text" id="otherName" placeholder="Your Crush's Name" />
       <br />
       <div id="disappear">
-        <button type="submit" onclick="btn()" id="count">
-          Calculate Love %
-        </button>
+        <input type="submit" id="count" value="Calculate Love %" />
       </div>
       <p id="number"></p>
     </form>
+    <script type="text/javascript" src="./main.js"></script>
   </body>
 </html>

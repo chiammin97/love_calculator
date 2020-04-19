@@ -1,30 +1,32 @@
-alert("Please Enter Name");
+function $(el) {
+  return document.getElementById(el);
+}
+
+//document.getElemenById(el) gets the elements with id "el"
+//el used to generate DOM elements
+//$ used so that it wont clash with other codes in the page
 
 function main() {
+  $("myForm").addEventListener(
+    "submit",
+    (e) => {
+      e.preventDefault();
 
-const name = document.getElementById("yourName")
-const name2 = document.getElementById("otherName")
-const form = document.getElementById("myForm")
-const errorElement = document.getElementById('error')
+      if (!$("yourName").value || !$("otherName").value) {
+        alert("Please Enter Name");
+        return false;
+      }
 
-form.addEventListener('submit', (e) => {
-    
-    e.preventDefault()
-
-    
-    if (name.value === '' || name.value == null) {
-        //errorElement.innerText = ("Please Enter Name");
-        //alert("Please Enter Name");
-        return
-    }
+      $("disappear").innerHTML = "";
+      $("number").innerHTML = Math.floor(Math.random() * 100) + "%";
+    },
+    false
+  );
 }
 
-function btn() {
-  document.getElementById("disappear").innerHTML = "";
-  document.getElementById("number").innerHTML =
-    Math.floor(Math.random() * 100) + "%";
-}
+// => means transform from _ to _ ??
 
-}
+// Ensure document is loaded before the script executes.
+window.onload = main;
 
-document.onload = main
+//must make the only alphabets in the search box
