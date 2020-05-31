@@ -1,10 +1,14 @@
-function $(el) {
+ 
+ 
+ 
+ function $(el) {
   return document.getElementById(el);
-}
+} 
 
 //document.getElemenById(el) gets the elements with id "el"
 //el used to generate DOM elements
 //$ used so that it wont clash with other codes in the page
+
 
 function main() {
   $("myForm").addEventListener(
@@ -30,3 +34,4 @@ function main() {
 window.onload = main;
 
 //must make the only alphabets in the search box
+*/
