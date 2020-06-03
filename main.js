@@ -1,37 +1,44 @@
- 
- 
- 
- function $(el) {
-  return document.getElementById(el);
-} 
+var $myForm = document.querySelector("#myForm");
 
-//document.getElemenById(el) gets the elements with id "el"
-//el used to generate DOM elements
-//$ used so that it wont clash with other codes in the page
+var $nameOne = document.querySelector("#nameOne");
+var $nameTwo = document.querySelector("#nameTwo");
 
+var $disappear = document.querySelector("#disappear");
+var $number = document.querySelector("#number");
+
+window.onload = main();
 
 function main() {
-  $("myForm").addEventListener(
-    "submit",
-    (e) => {
-      e.preventDefault();
+  $myForm.addEventListener("submit", checkValue);
 
-      if (!$("yourName").value || !$("otherName").value) {
-        alert("Please Enter Name");
-        return false;
-      }
+  function checkValue() {
+    event.preventDefault();
 
-      $("disappear").innerHTML = "";
-      $("number").innerHTML = Math.floor(Math.random() * 100) + "%";
-    },
-    false
-  );
+    var $alphabet = /^[A-Za-z]+$/;
+
+    if ($nameOne.value.match($alphabet) && $nameTwo.value.match($alphabet)) {
+      console.log("True");
+      calculateNum();
+      return true;
+    } else if ($nameOne.value || $nameTwo.value === "") {
+      console.log("Error1");
+      errorMessage();
+      return false;
+    }
+  }
 }
 
-// => means transform from _ to _ ??
+function calculateNum() {
+  $disappear.innerHTML = "";
+  $number.innerHTML = Math.floor(Math.random() * 100) + "%";
+}
 
-// Ensure document is loaded before the script executes.
-window.onload = main;
+function errorMessage() {
+  var $error = document.getElementById("error");
+  $error.style.visibility = "visible";
+  $error.innerHTML = "Please Enter Valid Name";
 
-//must make the only alphabets in the search box
-*/
+  setTimeout(function (hidden) {
+    $error.style.display = "none";
+  }, 3000);
+}

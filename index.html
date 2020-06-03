@@ -13,17 +13,19 @@
     </script>
   </head>
   <body onload="init();">
-    <div id="error"></div>
+    <div id="empty"></div>
     <form id="myForm">
-      <input type="text" id="yourName" placeholder="Your Name" />
+      <p id="error">Error Message</p>
+      <input id="nameOne" type="text" placeholder="Your Name" />
       <span class="heart_icon">&#128149;</span>
-      <input type="text" id="otherName" placeholder="Your Crush's Name" />
+      <input id="nameTwo" type="text" placeholder="Your Crush's Name" />
       <br />
+
       <div id="disappear">
-        <input type="submit" id="count" value="Calculate Love %" />
+        <button id="count">Calculate Love %</button>
       </div>
       <p id="number"></p>
     </form>
-    <script type="text/javascript" src="./main.js"></script>
+    <script src="./main.js"></script>
   </body>
 </html>
