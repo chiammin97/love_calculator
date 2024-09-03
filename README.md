@@ -5,3 +5,4 @@ To Do:<br>
 - [x] Allow only letters in input <br>
 - [ ] Animation for Random Number Generator <br>
 - [ ] Improve design 
+
